@@ -25,13 +25,10 @@ public class Main extends JFrame {
         setVisible(true);
 
 
-        button1.addActionListener(e -> System.out.println("Button1"));
+        button1.addActionListener(_ -> System.out.println("Button1"));
 
-        ActionListener accion = new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(e.getActionCommand());
-            }
-        };
+        ActionListener accion = e -> System.out.println(e.getActionCommand());
         button2.addActionListener(accion);
+        button3.addActionListener(accion);
     }
 }
