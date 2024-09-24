@@ -24,5 +24,9 @@ public class Main {
 
         MostradorDeNumeros mostradorDeNumeros = new MostradorDeNumeros();
 
+        mostradorDeNumeros.mostrar(numeros, n -> n > 4);
+        mostradorDeNumeros.mostrar(numeros, num -> num % 2 == 0);
+        mostradorDeNumeros.mostrar(numeros, numero -> numero % 3 ==0);
+
     }
 }
