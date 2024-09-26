@@ -26,9 +26,9 @@ interface Filtro{
 
 class MostradorDeAlumnos{
     void mostrar(ArrayList<Estudiante> alumno,Filtro filtro){
-        for(var est : alumno){
+        for(Estudiante est : alumno){
             if(filtro.filtrar(est)){
-                System.out.println(est + " ");
+                System.out.println(est);
             }
         }
     }
@@ -50,7 +50,7 @@ public class Main {
 
         mostrador_alu.mostrar(estudiantes,est -> est.nota >= 5 );
 
-        System.out.println();
+       System.out.println();
 
         mostrador_alu.mostrar(estudiantes, new Filtro() {
             @Override
